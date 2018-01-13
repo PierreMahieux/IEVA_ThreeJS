@@ -132,13 +132,13 @@ Mobile.prototype.arrive = function(){
 	var d = this.position.distanceTo(this.target) ; 
 
 	if(d<0.25){
-		this.vitesse = 0.0 ; 
-		this.isArrive = false ; 
-		this.onTarget = true ;
+		// this.vitesse = 0.0 ; 
+		// this.isArrive = false ; 
+		// this.onTarget = true ;
 		if(this.controleur != null){
 			this.controleur.reagir() ; 
 		}
-		alert("ARRIVE") ; 
+		this.setArrive(new THREE.Vector3(Math.floor(Math.random() * 6) + 1,1.7,Math.floor(Math.random() * 6) + 1));
 	} else
 	if(d<3.0)
 	{
